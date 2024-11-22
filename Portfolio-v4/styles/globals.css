@@ -1,0 +1,88 @@
+:root {
+  font-size: 62.5%;
+
+  --background: rgb(245, 245, 245); /* Light gray */
+  --bg-opaque: rgba(245, 245, 245, 0.8); /* Semi-transparent light gray */
+  --background-light: rgb(255, 255, 255); /* White */
+  --background-dark: rgb(230, 230, 230); /* Slightly darker gray */
+
+  --text: rgb(50, 50, 50); /* Very dark gray */
+  --brand: rgb(100, 100, 100); /* Medium gray */
+
+  --text-xs: 1.6rem;
+  --text-sm: 1.8rem;
+  --text-md: 2.2rem;
+  --text-lg: 3.6rem;
+  --text-xl: 5.6rem;
+  --text-2xl: 9.6rem;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+html,
+body {
+  max-width: 100vw;
+  scroll-behavior: smooth;
+  font-size: var(--text-sm);
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  background-color: var(--background);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--brand);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.section-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1150px;
+  margin: auto;
+  padding: 9.6rem;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 7.2rem 2.4rem;
+  }
+}
+
+.chip {
+  font-size: var(--text-xs);
+  background: var(--background-light);
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+}
